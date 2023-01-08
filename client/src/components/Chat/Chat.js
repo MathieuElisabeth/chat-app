@@ -18,7 +18,7 @@ const Chat = ({location}) => {
 
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = 'chat-app-api-44c8.up.railway.app';
+  const ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 
   useEffect(() => {
     const {name, room} = queryString.parse(location.search);
